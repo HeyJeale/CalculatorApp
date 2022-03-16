@@ -1,5 +1,6 @@
 package edu.zjut.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
@@ -111,8 +112,23 @@ public class MainActivity extends AppCompatActivity {
 
     final class NumberListeners {
 
+        @NonNull
         String getLastNumber(){
-            
+            String currentDisplay=resultDisplay.getText().toString();
+            int[] indices ={currentDisplay.lastIndexOf("+"),
+                    currentDisplay.lastIndexOf("-"),
+                    currentDisplay.lastIndexOf(getString(R.string.multiply)),
+                    currentDisplay.lastIndexOf(getString(R.string.divide))};
+            int maxIndex=-1;
+            for (int i :
+                    indices) {
+                if (i>maxIndex) maxIndex=i;
+            }
+            if(maxIndex>-1){
+                return resultDisplay.getText().toString().substring(maxIndex+1);
+            }else{
+                return "";
+            }
         }
 
         boolean isTailedWithOperator(){
@@ -123,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         boolean isLastDotted(){
-            return resultDisplay.getText().toString().contains(".");
+            return getLastNumber().contains(".");
         }
 
         boolean isInitial(){
