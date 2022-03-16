@@ -1,0 +1,412 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:jeale="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calculator_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/ButtonRow0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            jeale:layout_constraintEnd_toEndOf="parent"
+            jeale:layout_constraintHeight_percent="0.166"
+            jeale:layout_constraintStart_toStartOf="parent"
+            jeale:layout_constraintTop_toTopOf="parent">
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/MemoryClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/memory_clear"
+                app:textColor="@color/white"
+                jeale:src="@drawable/selector_for_mem_op"
+                jeale:textSize="30" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/MemoryPlus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/memory_plus"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:textColor="@color/white"
+                jeale:src="@drawable/selector_for_mem_op"
+                jeale:textSize="30" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/MemoryMinus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/memory_minus"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_mem_op"
+                app:textColor="@color/white"
+                jeale:textSize="30" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/MemoryRetrieve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/memory_retrieve"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_mem_op"
+                app:textColor="@color/white"
+                jeale:textSize="30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonRow1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ButtonRow0">
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/ClearButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/clear"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="30" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/BackSpaceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="30" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/PercentageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/percentage"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/DivisionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/divide"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="38" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonRow2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonRow1">
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/SevenButton_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/seven"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/EightButton_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/eight"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/NineButton_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/nine"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/MultiplicationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/multiply"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="38" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonRow3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonRow2">
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/FourButton_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/four"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/FiveButton_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/five"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/SixButton_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/six"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/SubtractionButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/subtract"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="38" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonRow4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonRow3">
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/OneButton_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/one"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/TwoButton_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/two"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/ThreeButton_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/three"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/AdditionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/addition"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_normal_op"
+                app:textColor="@color/white"
+                jeale:textSize="38" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ButtonRow5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonRow4">
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/ModeChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mode_change"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="14" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/ZeroButton_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/PointButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/point"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_num"
+                app:textColor="@color/black"
+                jeale:textSize="38" />
+
+            <edu.zjut.calculator.ImageButtonWithText
+                android:id="@+id/EqualsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/equals"
+                android:textAlignment="center"
+                app:src="@drawable/selector_for_equals"
+                app:textColor="@color/white"
+                jeale:textSize="38" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        jeale:srcCompat="@drawable/display"
+        android:contentDescription="This is a pic" />
+
+    <TextView
+        android:id="@+id/ResultDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="end"
+        android:text="@string/result"
+        android:textAlignment="textEnd"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
